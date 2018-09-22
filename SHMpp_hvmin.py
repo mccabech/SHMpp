@@ -157,14 +157,14 @@ Norm1S = ( sumNS * pi**(3./2.) * 2.**(3./2.)
 ##########################################
 # Round component
 # Calculate the h(vmin) integral for fR(v)
-# output table of vmin [km/s] and h(vmin) [s/km]
+# output table of vmin [km/s] and h(vmin) [km/s]
 #########################################
 
 #weight function is exp(-(x2+y2+z2))
 #integral performed in the galactic frame
 
 print("Calculating hvmin for Round component")
-print("vmin [km/s],","h(vmin) [s/km]")
+print("vmin [km/s],","h(vmin) [km/s]")
 
 ve = vE(Day,v0)
 
@@ -213,14 +213,14 @@ savetxt("hvmin_round.dat",LoutR)
 ##########################################
 # Sausage component
 # Calculate the h(vmin) integral for fS(v)
-# output table of vmin [km/s] and h(vmin) [s/km]
+# output table of vmin [km/s] and h(vmin) [km/s]
 #########################################
 
 #weight function is exp(-(x2+y2+z2))
 #integral performed in the galactic frame
 
 print("Calculating hvmin for Sausage component")
-print("vmin [km/s],","h(vmin) [s/km]")
+print("vmin [km/s],","h(vmin) [km/s]")
 
 ve = vE(Day,v0)
 
@@ -264,7 +264,7 @@ savetxt("hvmin_sausage.dat",LoutS)
 
 ##########################################
 # Combine round and Sausage components for SHM++
-# output table of vmin [km/s] and h(vmin) [s/km]
+# output table of vmin [km/s] and h(vmin) [km/s]
 #########################################
 
 print("Calculating hvmin for SHM++ ( with eta=",eta,")")
@@ -278,5 +278,5 @@ plot(Lvx, LhvminS,"b--",  label='Sausage component')
 plot(Lvx, LhvminSHMpp,"k", label='SHM++ with eta='+str(eta))
 legend(loc='upper right')
 xlabel("vmin [km/s]")
-ylabel("h(vmin) [s/km]")
+ylabel("h(vmin) [km/s]")
 show()
