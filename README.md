@@ -19,4 +19,4 @@ The file hvmin_sausage.dat gives h(vmin) from the sausage component of the halo.
 The file hvmin_SHMpp.dat gives h(vmin) for the SHM++ with eta=0.2.
 
 The code is fairly self-explantatory.
-For queries, email christopher.mccabe@kcl.ac.uk
+For queries, email christopher.mccabe@kcl.ac.uk.
