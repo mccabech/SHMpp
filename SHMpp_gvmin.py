@@ -7,8 +7,8 @@ from numpy import zeros, empty, array, loadtxt, savetxt, copy
 #If you use this code please cite:
 
 #SHM++: A Refinement of the Standard Halo Model for Dark Matter Searches
-#Evans, McCabe, O'Hare
-#arXiv:1809.?????
+#Evans, O'Hare, McCabe
+#arXiv:1810.11468
 
 #The Earth's velocity for direct detection experiments 
 #McCabe
