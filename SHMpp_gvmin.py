@@ -4,15 +4,18 @@ from pylab import plot, show, xlabel, ylabel, legend
 from numpy import zeros, empty, array, loadtxt, savetxt, copy
 
 ##########################################
-#If you use this code please cite:
+#If you use this code, please cite:
 
-#SHM++: A Refinement of the Standard Halo Model for Dark Matter Searches
+#SHM++: A Refinement of the Standard Halo Model for
+#Dark Matter Searches in Light of the Gaia Sausage 
 #Evans, O'Hare, McCabe
 #arXiv:1810.11468
+#DOI:10.1103/PhysRevD.99.023012
 
 #The Earth's velocity for direct detection experiments 
 #McCabe
-#arXiv:1312.1355 
+#arXiv:1312.1355
+#DOI:10.1088/1475-7516/2014/02/027 
 ##########################################
 
 ##########################################
@@ -21,7 +24,7 @@ from numpy import zeros, empty, array, loadtxt, savetxt, copy
 
 #SHM++ Halo parameters
 v0 = 233.
-vesc = 580.
+vesc = 528.
 beta = 0.9
 eta = 0.2
 
@@ -39,8 +42,8 @@ vdisSaus = [sigrSaus, sigtSaus, sigtSaus]
 Day = 60.8
 
 print("Halo parameters:")
-print("v0 is", v0)
-print("vesc is", vesc)
+print("v0 [km] is", v0)
+print("vesc [km] is", vesc)
 print("beta is", beta)
 print("eta is", eta)
 print("Days after 1 Jan 2020:", Day)
@@ -126,7 +129,9 @@ Norm1R = ( sumNR * pi**(3./2.) * 2.**(3./2.)
               * vdisR[0] * vdisR[1] * vdisR[2] / N )
 
 #Exact answer for Norm1R/v0**3 is known:
-#it is 5.53407 for vesc = 580, v0=233
+#See eg. Appendix B of The Astrophysical Uncertainties Of Dark 
+#Matter Direct Detection Experiments, McCabe, arXiv:1005.0579
+#it is 5.47699 for vesc = 528, v0=233
 #print("Check numerical: round halo normalisation", Norm1R/v0**3.)
 
 
@@ -148,8 +153,10 @@ sumNS = np.sum(fconditionS.astype(int))
 Norm1S = ( sumNS * pi**(3./2.) * 2.**(3./2.)
               * vdisSaus[0] * vdisSaus[1] * vdisSaus[2] / N )
 
-#Exact answer for Norm1S/v0**3 is known:
-#it is 2.13636 for vesc = 580, v0=233, beta=0.9
+#Exact answer for Norm1S/v0**3 is known.
+#See eg. Eq. 7 of SHM++: A Refinement of the Standard Halo Model...
+##Evans, O'Hare, McCabe, arXiv:1810.11468
+#it is 2.09443 for vesc = 528, v0=233, beta=0.9
 #print("Check numerical: Sausage halo normalisation", Norm1S/v0**3.)
 
 
