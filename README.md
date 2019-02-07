@@ -19,4 +19,6 @@ The file hvmin_sausage.dat gives h(vmin) from the sausage component of the halo.
 The file hvmin_SHMpp.dat gives h(vmin) for the SHM++ with eta=0.2.
 
 The code is fairly self-explantatory.
+Between v1 and v2 (which matched the PRD version) of the paper, we updated vesc to the newer value (528 km/s) from Deason et al (arXiv:1901.02016).
+The codes have been updated (Feb. 2019) to include this new value for vesc.
 For queries, email christopher.mccabe@kcl.ac.uk.
